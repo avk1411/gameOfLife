@@ -8,28 +8,59 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript' src="game.js?v=2"></script>
+    <style>
+        .body{
+            font-family: 'Helvetica';
+            
+        }
+        .btn-group {
+            height: 30px;
+            padding-top: 20px;
+        }
+
+        .btn-group>button{
+            background-color:	#250582;
+            color: whitesmoke;
+            height: 30px;
+            border-radius: 5px;
+            border: 0px;
+            min-width: 100px;
+        }
+        .outerDiv{
+            width: 600px;
+            margin: 0 auto;
+        }
+
+    </style>
 </head>
 
 <body >
-    
+    <div class="outerDiv">
     <h2>RULES</h2>
+    <hr>
     <h3>For a space that is 'populated'</h3>
-    <p>Each cell with one or no neighbors dies, as if by solitude.<br>
-    Each cell with four or more neighbors dies, as if by overpopulation.<br>
-    Each cell with two or three neighbors survives.</p>
+    <ul>
+        <li>Each cell with one or no neighbors dies, as if by solitude.</li>
+        <li>Each cell with four or more neighbors dies, as if by overpopulation.</li>
+        <li>Each cell with two or three neighbors survives.</li>
+    </ul>
     <h3>For a space that is 'empty' or 'unpopulated'</h3>
-    <p>Each cell with three neighbors becomes populated.</p>
+    <ul>
+        <li>Each cell with three neighbors becomes populated.</li>
+    </ul>
+    <hr>
     
-    <div>
-        <canvas id="grid" width="300" height="300" style="border:0px solid"></canvas>
+    <div class="canvasContainer">
+        <canvas id="grid" width="600" height="450" style="border:0px solid; margin: 0px auto"></canvas>
     </div>
     <div class="btn-group">
         <button onclick="clearGrid();">Clear</button>
         <button onclick="nextGen();">Next</button>
         <button onclick="startSim();">Start</button>
         <button onclick="stopSim();">Stop</button>
-        <span>Generation count</span>
-        <span id ="genCount">0</span>
+        <button><span>Generation count</span>
+        <span id ="genCount">0</span></button>
+    </div>
     </div>
     
 </body>
