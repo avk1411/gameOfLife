@@ -1,0 +1,36 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Game Of Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type='text/javascript' src="game.js?v=2"></script>
+</head>
+
+<body >
+    
+    <h2>RULES</h2>
+    <h3>For a space that is 'populated'</h3>
+    <p>Each cell with one or no neighbors dies, as if by solitude.<br>
+    Each cell with four or more neighbors dies, as if by overpopulation.<br>
+    Each cell with two or three neighbors survives.</p>
+    <h3>For a space that is 'empty' or 'unpopulated'</h3>
+    <p>Each cell with three neighbors becomes populated.</p>
+    
+    <div>
+        <canvas id="grid" width="300" height="300" style="border:0px solid"></canvas>
+    </div>
+    <div class="btn-group">
+        <button onclick="clearGrid();">Clear</button>
+        <button onclick="nextGen();">Next</button>
+        <button onclick="startSim();">Start</button>
+        <button onclick="stopSim();">Stop</button>
+        <span>Generation count</span>
+        <span id ="genCount">0</span>
+    </div>
+    
+</body>
+</html>
